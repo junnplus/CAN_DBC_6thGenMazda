@@ -51,7 +51,7 @@ BO_ 70 HS_SSU: 8 HS_SSU
 BO_ 80 HS_SSU: 8 HS_SSU
    SG_ KeyState : 1|2@0+ (1,0) [0|1] "" Vector__XXX
    SG_ KeyStateInv : 58|3@0+ (1,0) [0|1] "" Vector__XXX
-   SG_ ClutchPos : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ StarterInterLockSW : 25|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 130 HS_SSU: 8 HS_SSU
 
@@ -251,7 +251,7 @@ BO_ 1244 HS_PCM: 8 HS_PCM
 BO_ 1264 HS_PCM: 8 HS_PCM
 
 BO_ 1274 HS_PCM: 8 HS_PCM
-   SG_ IntakeAirTemp_maybe : 39|8@0+ (1,-40) [-40|160] "degC" Vector__XXX
+   SG_ IAT_Sensor_No1 : 39|8@0+ (1,-40) [-40|160] "degC" Vector__XXX
 
 BO_ 1278 HS_PCM: 8 HS_PCM
 
@@ -445,3 +445,4 @@ VAL_ 1086 R_FOG_LAMP 1 "On" 0 "Off";
 VAL_ 357 MT_Gear_Select 1 "InGear" 2 "Newtral";
 VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
 VAL_ 357 CC_Mode_Related2 0 "OFF" 1 "ON";
+VAL_ 159 Parking_Brake 0 "Released" 1 "Pulled";
