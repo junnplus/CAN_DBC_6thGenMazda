@@ -35,7 +35,7 @@ NS_ :
     SG_MUL_VAL_
 
 BS_: 
-BU_: HS_SSU HS_CMU_Maybe HS_BCMM HS_LVL HS_ABS HS_IC HS_RCM HS_EPAS HS_FSC2 HS_PCM HS_EVP HS_DCDC_Maybe HS_MRCC HS_HUD_MZ HS_RHT HS_TCUAT OBD2 LICENSE
+BU_: HS_SSU HS_CMU_Maybe HS_BCMM HS_LVL HS_ABS HS_IC HS_RCM HS_EPAS HS_FSC2 HS_PCM HS_EVP HS_DCDC_Maybe HS_MRCC HS_HUD_MZ HS_RHT HS_TCUAT OBD2 LICENSE 
 BO_ 145 HS_SSU: 8 HS_SSU
    SG_ HAZ_SW : 10|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ WIP_F_INT : 55|8@0+ (1,0) [0|1] "" Vector__XXX
@@ -51,6 +51,7 @@ BO_ 70 HS_SSU: 8 HS_SSU
 BO_ 80 HS_SSU: 8 HS_SSU
    SG_ KeyState : 1|2@0+ (1,0) [0|1] "" Vector__XXX
    SG_ KeyStateInv : 58|3@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ StarterInterLockSW : 25|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 130 HS_SSU: 8 HS_SSU
 
@@ -77,6 +78,7 @@ BO_ 159 HS_IC: 8 HS_IC
    SG_ PCONSW_Panel_Light_Control_Switch : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
    SG_ DIM_CSW_Dimmer_Cancel_Switch : 47|1@0+ (1,0) [0|1] "" Vector__XXX
    SG_ Reverse_Flag_maybe : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ Parking_Brake : 4|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 606 HS_IC: 8 HS_IC
    SG_ VehicleSpeed : 7|10@0+ (1,0) [0|1] "" HS_HUD_MZ
@@ -227,7 +229,7 @@ BO_ 543 HS_PCM: 8 HS_PCM
 
 BO_ 1056 HS_PCM: 8 HS_PCM
    SG_ CoolantTemp : 7|8@0+ (1,-40) [0|1] "degC" Vector__XXX
-   SG_ AmbientTemp : 63|8@0+ (0.25,0) [0|1] "degC" Vector__XXX
+   SG_ AmbientTemp : 55|16@0+ (0.25,-3200) [0|1] "degC" Vector__XXX
 
 BO_ 1067 HS_PCM: 8 HS_PCM
 
@@ -250,6 +252,7 @@ BO_ 1244 HS_PCM: 8 HS_PCM
 BO_ 1264 HS_PCM: 8 HS_PCM
 
 BO_ 1274 HS_PCM: 8 HS_PCM
+   SG_ IAT_Sensor_No1 : 39|8@0+ (1,-40) [-40|160] "degC" Vector__XXX
 
 BO_ 1278 HS_PCM: 8 HS_PCM
 
@@ -433,6 +436,7 @@ VAL_ 628 Key_notfound 1 "Key_not_found" 0 "-";
 VAL_ 628 IC_Buzz 0 "No Description" 1 "P-P-" 2 "P-P-x3" 3 "PPx6";
 VAL_ 628 Key_Batt 1 "Key_Battery_is_low" 0 "-";
 VAL_ 628 Key_fob 5 "Lock" 6 "Unlock";
+VAL_ 159 Parking_Brake 0 "Released" 1 "Applied";
 VAL_ 606 SpeedUnit 0 "km/h" 1 "mph";
 VAL_ 606 StopVehicle 0 "" 1 "Stop_Vehicle_at_safe_area";
 VAL_ 606 DAA_Related 6 "RecommendRest";
